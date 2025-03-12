@@ -1,0 +1,116 @@
+/* src/styles/global.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  max-width: 375px;
+  margin: 0 auto;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+
+  background-color: #2f2439;
+  background: url("/images/bg-stars.svg") top center/cover no-repeat,
+    url("/images/pattern-hills.svg") bottom no-repeat;
+  background-blend-mode: overlay;
+  color: #333;
+}
+
+@media (min-width: 1024px) {
+  /* Adjust for tablet & desktop */
+  body {
+    max-width: 1440px;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  width: 90%; /* Keeps it responsive */
+  margin: 0 auto;
+  text-align: center;
+}
+h1 {
+  color: white;
+  padding-bottom: 20px;
+}
+.socialbox {
+  position: fixed;
+  align-self: center;
+  bottom: 50px; /* Adjust as needed */
+
+  left: 50%;
+  transform: translateX(-50%); /* Centers it horizontally */
+  display: flex;
+  gab: 10px;
+  box-shadow: none;
+}
+
+.social-btn {
+  box-shadow: none;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+.social-btn:active {
+  background-color: #fb5e84; /* Light grey transparent */
+}
+
+.displaybox {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.time-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #fb5e84;
+}
+
+.test {
+  width: 148px;
+  height: 140px;
+  padding: 10%;
+  background: linear-gradient(to bottom, #343650 50%, #8385a9 50%);
+  color: #fb5e84;
+  position: relative; /* Needed for absolute positioning */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hides the overflowing part of the ovals */
+  border-radius: 8px;
+  border-inline-color: 2px solid #979797; /* Adds a white line in between */
+
+  font-size: 80px;
+
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3); /* Adds a bottom shadow */
+}
+
+.oval {
+  width: 12px;
+  height: 12px;
+  background-color: rgb(8, 8, 9); /* Default oval color */
+  border-radius: 50px; /* Makes it an oval */
+  position: absolute; /* Allows precise positioning */
+  top: 50%; /* Aligns vertically */
+  transform: translateY(-50%); /* Centers it perfectly */
+}
+
+.oval.left {
+  left: -5px;
+  /* Left oval color */
+}
+
+.oval.right {
+  right: -5px;
+}
